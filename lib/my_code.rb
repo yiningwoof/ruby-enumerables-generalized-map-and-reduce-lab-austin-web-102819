@@ -8,8 +8,8 @@ def map(arr)
 end
 
 def reduce(arr, start = 0)
-  for i in 0...arr.length - 1 do
-    result = yield(arr[i], arr[i + 1])
+  for i in 0...arr.length do
+    result = yield(result, arr[i])
   end
   result += start if start != 0
   result
